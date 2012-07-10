@@ -9,6 +9,8 @@ it expects:
 
 * postfixadmin database to be called 'postfix'
 
+* a default domain configured on cyrup2postfixadmin.sql
+
 SHA1 conversion (from text to base64 encoded binary)
 ----------------------------------------------------
 

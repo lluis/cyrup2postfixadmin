@@ -1,5 +1,5 @@
 
-SET @defaultdomain="@unespai.com"; -- will be appended to admin users login
+SET @defaultdomain="@domain.tld"; -- will be appended to admin users login
 
 ------------------------------
 
