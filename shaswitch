@@ -1,0 +1,4 @@
+#!/bin/env ruby
+
+require 'base64'
+print Base64.encode64([ARGV[0]].pack('H*')).chop
