@@ -49,6 +49,9 @@ insert into postfix.mailbox (username,password,name,maildir,quota,local_part,dom
     from mail.cyrup_accounts, mail.cyrup_domains
     where mail.cyrup_domains.id=mail.cyrup_accounts.domain_id and mail.cyrup_accounts.account != "cyrus";
 
+-- quota kilobytes to bytes
+update postfix.mailbox set mailbox.quota=mailbox.quota*1024;
+
 -- aliases
 insert into postfix.alias (address,goto,domain,active)
     select mail.cyrup_accounts.account,mail.cyrup_aliases.alias,mail.cyrup_domains.domain,mail.cyrup_aliases.enabled
