@@ -1,7 +1,7 @@
 
 SET @defaultdomain="@domain.tld"; -- will be appended to admin users login
 
-------------------------------
+-- ----------------------------
 
 -- function to split a string
 CREATE FUNCTION strSplit(x varchar(255), delim varchar(12), pos int) returns varchar(255)

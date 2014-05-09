@@ -16,5 +16,5 @@ SHA1 conversion (from text to base64 encoded binary)
 
 * copy shaswitch script to somewhere in your path
 
-* install lib_mysqludf_sys from UDF: http://www.mysqludf.org/lib_mysqludf_sys/index.php
+* install lib_mysqludf_sys from UDF: https://github.com/mysqludf/lib_mysqludf_sys
 
