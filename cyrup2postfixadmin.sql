@@ -4,6 +4,7 @@ SET @defaultdomain="@domain.tld"; -- will be appended to admin users login
 -- ----------------------------
 
 -- function to split a string
+DROP FUNCTION IF EXISTS strSplit;
 CREATE FUNCTION strSplit(x varchar(255), delim varchar(12), pos int) returns varchar(255)
 return replace(substring(substring_index(x, delim, pos), length(substring_index(x, delim, pos - 1)) + 1), delim, '');
 
@@ -54,7 +55,7 @@ update postfix.mailbox set mailbox.quota=mailbox.quota*1024;
 
 -- aliases
 insert into postfix.alias (address,goto,domain,active)
-    select mail.cyrup_accounts.account,mail.cyrup_aliases.alias,mail.cyrup_domains.domain,mail.cyrup_aliases.enabled
+    select mail.cyrup_aliases.alias,mail.cyrup_accounts.account,mail.cyrup_domains.domain,mail.cyrup_aliases.enabled
     from mail.cyrup_aliases,mail.cyrup_accounts,mail.cyrup_domains
     where mail.cyrup_aliases.account_id=mail.cyrup_accounts.id and mail.cyrup_aliases.domain_id=mail.cyrup_domains.id;
 
