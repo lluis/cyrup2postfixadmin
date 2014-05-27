@@ -18,3 +18,7 @@ SHA1 conversion (from text to base64 encoded binary)
 
 * install lib_mysqludf_sys from UDF: https://github.com/mysqludf/lib_mysqludf_sys
 
+TODO
+----
+
+* migrate cyrup_maillists (now should be done manually)
